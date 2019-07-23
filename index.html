@@ -5,96 +5,115 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Junior test task</title>
     <link rel="stylesheet" href="build/css/main.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
-<header class="container">
+<header>
+    <div class="container">
         <div class="logo">
             <img src="app/img/fingerprint.png" alt="logo">
             <img src="app/img/Brandname.png" alt="brandname">
         </div>
-        <div class="top-menu">
-            <nav>
-                <ul>
-                    <li>Features</li>
-                    <li>Support</li>
-                    <li>Blog</li>
-                </ul>
-            </nav>
+        <nav class="top-menu">
+            <ul class="nav nav-list">
+                <li class="nav-item"><a class="normal" href="#">Features</a></li>
+                <li class="nav-item"><a href="#">Support</a></li>
+                <li class="nav-item"><a href="#">Blog</a></li>
+            </ul>
+        </nav>
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="#">Features</a>
+                <a href="#">Support</a>
+                <a href="#">Blog</a>
+            </div>
         </div>
+    </div>
 </header>
 <main>
-    <section class="slider">
-        <div class="container">
-            <div class="content">
-                <div class="iPad-mini-white-facing">
-                    <div class="iPad-mini-white">
-                        <div class="logo-inverse">
-                            <img src="app/img/fingerprint-yellow.png" alt="logo">
-                            <img src="app/img/Brandname-yellow.png" alt="brandname">
+    <section class="hero">
+            <div class="container">
+                <div class="slider">
+                    <div class="content">
+                        <h2>Inspire your inspiration</h2>
+                        <p>Simple to use for your app, products<br> showcase and your inspirat</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br> Praesent vitae
+                            eros eget tellus tristique bibendum. Donec<br> rutrum sed sem quis venenatis.
+                            Proin viverra risus a eros<br> volutpat tempor. In quis arcu et eros porta
+                            lobortis sit
+                        </p>
+                        <div class="store-buttons">
+                            <button class="btn-down">
+                                <img src="app/img/icon-fa-apple.png" alt="">
+                            </button>
+                            <button class="btn-down">
+                                <img src="app/img/icon-fa-android.png" alt="">
+                            </button>
+                            <button class="btn-down">
+                                <img src="app/img/icon-fa-windows.png" alt="">
+                            </button>
                         </div>
                     </div>
-                </div>
-                <h2>Inspire your inspiration</h2>
-                <span>Simple to use for your app, products showcase and your inspirat</span>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praese</p>
-                <div class="store-buttons">
-                    <button>
-                        <img src="app/img/icon-fa-apple.png" alt="">
-                    </button>
-                    <button>
-                        <img src="app/img/icon-fa-android.png" alt="">
-                    </button>
-                    <button>
-                        <img src="app/img/icon-fa-windows.png" alt="">
-                    </button>
-                </div>
-            </div>
-            <div class="slider-bullets"></div>
-        </div>
-    </section>
-    <section class="features container">
-        <h2>Tinyone features</h2>
-        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum. Donec rutrum sed sem quis venenatis.</span>
-        <div class="features-grid">
-            <div class="row-1">
-                <div class="featured-1">
-                    <img src="app/img/icon-font-1.png" alt="">
-                    <h3>Fully Responsive</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum.</p>
-                </div>
-                <div class="featured-2">
-                    <img src="app/img/icon-font-2.png" alt="">
-                    <h3>Fully Layered PSD</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum.</p>
-                </div>
-                <div class="featured-3">
-                    <img src="app/img/icon-font-3.png" alt="">
-                    <h3>Font Awesome Icons</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum.</p>
-                </div>
-            </div>
-            <div class="row-2">
-                <div class="featured">
-                    <img src="app/img/icon-font-4.png" alt="">
-                    <h3>HTML3 & CSS3</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum.</p>
-                </div>
-                <div class="featured">
-                    <img src="app/img/icon-font-5.png" alt="">
-                    <h3>Email Template</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum.</p>
-                </div>
-                <div class="featured">
-                    <img src="app/img/icon-font-6.png" alt="">
-                    <h3>Free to download</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+                    <div class="iPad-mini-white-facing">
+                        <img src="app/img/ipad.png" alt="">
+                    </div>
 
+                </div>
+                <div class="slider-bullets">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+    </section>
+    <section class="features">
+        <div class="container">
+            <h2>Tinyone features</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus<br> tristique bibendum. Donec rutrum sed sem quis venenatis.</p>
+            <div class="features-grid">
+                <div class="row-1">
+                    <div class="featured-1">
+                        <img src="app/img/icon-font-1.png" alt="">
+                        <h3>Fully Responsive</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus
+                            tristique bibendum.</p>
+                    </div>
+                    <div class="featured-2">
+                        <img src="app/img/icon-font-2.png" alt="">
+                        <h3>Fully Layered PSD</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus
+                            tristique bibendum.</p>
+                    </div>
+                    <div class="featured-3">
+                        <img src="app/img/icon-font-3.png" alt="">
+                        <h3>Font Awesome Icons</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus
+                            tristique bibendum.</p>
+                    </div>
+                </div>
+                <div class="row-2">
+                    <div class="featured">
+                        <img src="app/img/icon-font-4.png" alt="">
+                        <h3>HTML3 & CSS3</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus
+                            tristique bibendum.</p>
+                    </div>
+                    <div class="featured">
+                        <img src="app/img/icon-font-5.png" alt="">
+                        <h3>Email Template</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus
+                            tristique bibendum.</p>
+                    </div>
+                    <div class="featured">
+                        <img src="app/img/icon-font-6.png" alt="">
+                        <h3>Free to download</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus
+                            tristique bibendum.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </main>
 <footer>
     <div class="container">
