@@ -6,42 +6,52 @@
     background-color: #fcdb00;
     height: 10vh;
     opacity: 0.8;
+    min-height: 60px;
+
     .container {
       margin: 0;
       z-index: -1;
+
       .logo {
         margin-left: 15px;
       }
+
       .top-menu {
         display: none;
       }
+
       .dropdown {
         display: flex;
         position: absolute;
         width: 100%;
         flex-direction: column;
         z-index: -1;
+
         .drop-down-button {
           background-color: #fcdb00;
           display: flex;
           align-items: center;
           justify-content: flex-end;
           z-index: 1;
+
           .hamburger {
             display: flex;
             align-items: center;
             height: 10vh;
+
             .menu {
               font-size: 1.5rem;
               font-weight: bolder;
               margin-left: 20px;
             }
           }
-          .hamburger:focus{
+
+          .hamburger:focus {
             outline: none;
           }
 
         }
+
         .dropdown-content {
           position: absolute;
           transition: top 0.5s;
@@ -50,7 +60,8 @@
           display: flex;
           flex-direction: column;
           z-index: -5;
-          box-shadow: 0px 0px 39px -5px rgba(0,0,0,0.75);
+          box-shadow: 0px 0px 39px -5px rgba(0, 0, 0, 0.75);
+
           a {
             width: 100%;
             height: 15vh;
@@ -61,11 +72,15 @@
             align-items: center;
             justify-content: center;
             background-color: #fcdb00;
+
             &:hover {
-              background-color: #fcf900;
+              background-color: #000000;
+              color: white;
             }
+
             span {
               font-size: 1.5rem;
+
               &:hover {
                 color: white;
               }
@@ -75,45 +90,74 @@
       }
     }
   }
+
   main {
-   .hero {
-     .container {
-       .slider {
-         .iPad-mini-white-facing {
-           display: none;
-         }
-       }
-     }
-   }
-   .features {
-     height: 150vh;
-     .container {
-       .section-title {
-         margin: 0;
-       }
-       .features-grid {
-         .row {
-           display: flex;
-           flex-direction: column;
-           &:not(:last-child) {
-             margin: 0;
-           }
-           .featured {
-             margin-bottom: 20px;
-             justify-content: center;
-           }
-         }
-       }
-     }
-   }
- }
+    .hero {
+      .container {
+        text-align: center;
+
+        .slider {
+          .slider-item {
+            justify-content: center;
+          }
+
+          .iPad-mini-white-facing {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .features {
+      height: 160vh;
+      min-height: 1080px;
+
+      .container {
+        .section-title {
+          margin: 0;
+        }
+
+        .features-grid {
+          .row {
+            display: flex;
+            flex-direction: column;
+
+            &:not(:last-child) {
+              margin: 0;
+            }
+
+            .featured {
+              margin-bottom: 20px;
+              justify-content: center;
+            }
+          }
+        }
+      }
+    }
+  }
+
   footer {
     .container {
       .social-content {
         margin-bottom: 50px;
       }
+
       .address {
         margin-bottom: 50px
+      }
+
+      .email {
+        flex-direction: column;
+
+
+      }
+
+      .subcrible {
+        form {
+          input[type="text"] {
+            width: 30%;
+          }
+        }
       }
     }
   }
