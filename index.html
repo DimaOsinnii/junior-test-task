@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Junior test task</title>
     <link rel="stylesheet" href="build/css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/3ff768d6e9.js"></script>
 </head>
 <body>
 <header>
@@ -21,94 +23,171 @@
             </ul>
         </nav>
         <div class="dropdown">
-            <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+            <div class="drop-down-button">
+                <button class="hamburger hamburger--elastic" type="button">
+                        <span class="hamburger-box">
+                            <span class="hamburger-inner"></span>
+                        </span>
+                        <span class="menu">Menu</span>
+                </button>
+            </div>
             <div id="myDropdown" class="dropdown-content">
-                <a href="#">Features</a>
-                <a href="#">Support</a>
-                <a href="#">Blog</a>
+                <a href="#"><span>Features</span></a>
+                <a href="#"><span>Support</span></a>
+                <a href="#"><span>Blog</span></a>
             </div>
         </div>
     </div>
 </header>
 <main>
     <section class="hero">
-            <div class="container">
-                <div class="slider">
+        <div class="container">
+            <div class="slider">
+                <div class="slider-item">
                     <div class="content">
                         <h2>Inspire your inspiration</h2>
-                        <p>Simple to use for your app, products<br> showcase and your inspirat</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br> Praesent vitae
-                            eros eget tellus tristique bibendum. Donec<br> rutrum sed sem quis venenatis.
-                            Proin viverra risus a eros<br> volutpat tempor. In quis arcu et eros porta
+                        <p class="under-title">Simple to use for your app, products showcase and your inspirat</p>
+                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae
+                            eros eget tellus tristique bibendum. Donec rutrum sed sem quis venenatis.
+                            Proin viverra risus a eros volutpat tempor. In quis arcu et eros porta
                             lobortis sit
                         </p>
                         <div class="store-buttons">
                             <button class="btn-down">
-                                <img src="app/img/icon-fa-apple.png" alt="">
+                                <i class="fab fa-apple"></i>
                             </button>
                             <button class="btn-down">
-                                <img src="app/img/icon-fa-android.png" alt="">
+                                <i class="fab fa-android"></i>
                             </button>
                             <button class="btn-down">
-                                <img src="app/img/icon-fa-windows.png" alt="">
+                                <i class="fab fa-windows"></i>
                             </button>
                         </div>
                     </div>
                     <div class="iPad-mini-white-facing">
                         <img src="app/img/ipad.png" alt="">
                     </div>
-
                 </div>
-                <div class="slider-bullets">
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
+                <div class="slider-item">
+                    <div class="content">
+                        <h2>Inspire your inspiration</h2>
+                        <p class="under-title">Simple to use for your app, products showcase and your inspirat</p>
+                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae
+                            eros eget tellus tristique bibendum. Donec rutrum sed sem quis venenatis.
+                            Proin viverra risus a eros volutpat tempor. In quis arcu et eros porta
+                            lobortis sit
+                        </p>
+                        <div class="store-buttons">
+                            <button class="btn-down">
+                                <i class="fab fa-apple"></i>
+                            </button>
+                            <button class="btn-down">
+                                <i class="fab fa-android"></i>
+                            </button>
+                            <button class="btn-down">
+                                <i class="fab fa-windows"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="iPad-mini-white-facing">
+                        <img src="app/img/ipad.png" alt="">
+                    </div>
+                </div>
+                <div class="slider-item">
+                    <div class="content">
+                        <h2>Inspire your inspiration</h2>
+                        <p class="under-title">Simple to use for your app, products showcase and your inspirat</p>
+                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae
+                            eros eget tellus tristique bibendum. Donec rutrum sed sem quis venenatis.
+                            Proin viverra risus a eros volutpat tempor. In quis arcu et eros porta
+                            lobortis sit
+                        </p>
+                        <div class="store-buttons">
+                            <button class="btn-down">
+                                <i class="fab fa-apple"></i>
+                            </button>
+                            <button class="btn-down">
+                                <i class="fab fa-android"></i>
+                            </button>
+                            <button class="btn-down">
+                                <i class="fab fa-windows"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="iPad-mini-white-facing">
+                        <img src="app/img/ipad.png" alt="">
+                    </div>
                 </div>
             </div>
+            <div class="slider-bullets">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
     </section>
     <section class="features">
         <div class="container">
-            <h2>Tinyone features</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus<br> tristique bibendum. Donec rutrum sed sem quis venenatis.</p>
+            <div class="section-title">
+                <h2>Tinyone features</h2>
+                <p class="under-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Praesent vitae eros eget tellus tristique bibendum.
+                    Donec rutrum sed sem quis venenatis.
+                </p>
+            </div>
             <div class="features-grid">
-                <div class="row-1">
-                    <div class="featured-1">
-                        <img src="app/img/icon-font-1.png" alt="">
-                        <h3>Fully Responsive</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus
-                            tristique bibendum.</p>
+                <div class="row">
+                    <div class="featured">
+                        <i class="fas fa-tablet-alt"></i>
+                        <div class="description">
+                            <h3>Fully Responsive</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus
+                                tristique bibendum.
+                            </p>
+                        </div>
                     </div>
-                    <div class="featured-2">
-                        <img src="app/img/icon-font-2.png" alt="">
-                        <h3>Fully Layered PSD</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus
-                            tristique bibendum.</p>
+                    <div class="featured">
+                        <i class="far fa-lemon"></i>
+                        <div class="description">
+                            <h3>Fully Layered PSD</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus
+                                tristique bibendum.</p>
+                        </div>
                     </div>
-                    <div class="featured-3">
-                        <img src="app/img/icon-font-3.png" alt="">
-                        <h3>Font Awesome Icons</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus
-                            tristique bibendum.</p>
+                    <div class="featured">
+                        <i class="far fa-folder"></i>
+                        <div class="description">
+                            <h3>Font Awesome Icons</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus
+                                tristique bibendum.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="row-2">
+                <div class="row">
                     <div class="featured">
-                        <img src="app/img/icon-font-4.png" alt="">
-                        <h3>HTML3 & CSS3</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus
-                            tristique bibendum.</p>
+                        <i class="fas fa-code"></i>
+                        <div class="description">
+                            <h3>HTML3 & CSS3</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus
+                                tristique bibendum.
+                            </p>
+                        </div>
                     </div>
                     <div class="featured">
-                        <img src="app/img/icon-font-5.png" alt="">
-                        <h3>Email Template</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus
-                            tristique bibendum.</p>
+                        <i class="far fa-envelope"></i>
+                        <div class="description">
+                            <h3>Email Template</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus
+                                tristique bibendum.</p>
+                        </div>
                     </div>
                     <div class="featured">
-                        <img src="app/img/icon-font-6.png" alt="">
-                        <h3>Free to download</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus
-                            tristique bibendum.</p>
+                        <i class="far fa-bookmark"></i>
+                        <div class="description">
+                            <h3>Free to download</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus
+                                tristique bibendum.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -118,39 +197,50 @@
 <footer>
     <div class="container">
         <section class="subcrible">
-            <h2>Keep in touch with us</h2>
-            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum. Donec rutrum sed sem quis venenatis.</span>
-            <form>
-                <input type="text" placeholder="Enter your email to update">
-                <input type="submit" value="Submit">
-            </form>
+            <div class="section-title">
+                <h2>Keep in touch with us</h2>
+                <p class="under-title">Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit.
+                    Praesent vitae eros eget tellus
+                    tristique bibendum. Donec rutrum
+                    sed sem quis venenatis.
+                </p>
+            </div>
+            <div class="email">
+                <form>
+                    <input type="text" placeholder="Enter your email to update">
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
         </section>
         <section class="social-content">
-            <img src="app/img/facebook%20ico.png" alt="">
-            <img src="app/img/twitter%20ico.png" alt="">
-            <img src="app/img/google%20+%20ico.png" alt="">
-            <img src="app/img/pinterest%20ico.png" alt="">
+            <a href="#"><img src="app/img/facebook%20ico.png" alt=""></a>
+            <a href="#"><img src="app/img/twitter%20ico.png" alt=""></a>
+            <a href="#"><img src="app/img/google%20+%20ico.png" alt=""></a>
+            <a href="#"><img src="app/img/pinterest%20ico.png" alt=""></a>
         </section>
         <div class="footer-widgets">
-            <div class="address"></div>
+            <div class="address">
+                <p>HALOVIETNAM LTD 66, Dang Van ngu, Dong Da Hanoi, Vietnam contact@halovietnam.com +844 35149182</p>
+            </div>
             <div class="links-group">
-                <div class="column-1">
+                <div class="column">
                     <a href="#">Examples</a>
                     <a href="#">Shop</a>
                     <a href="#">License</a>
                 </div>
-                <div class="column-2">
+                <div class="column">
                     <a href="#">Contact</a>
                     <a href="#">About</a>
                     <a href="#">Privacy</a>
                     <a href="#">Terms</a>
                 </div>
-                <div class="column-3">
+                <div class="column">
                     <a href="#">Download</a>
-                    ]<a href="#">Support</a>
+                    <a href="#">Support</a>
                     <a href="#">Documents</a>
                 </div>
-                <div class="column-4">
+                <div class="column">
                     <a href="#">Media</a>
                     <a href="#">Blog</a>
                     <a href="#">Forums</a>

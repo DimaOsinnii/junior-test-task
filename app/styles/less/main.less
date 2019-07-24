@@ -1,13 +1,21 @@
-@import "imports/media";
-.container {
-   max-width: 960px;
-   margin: 0 10px;
- }
 body {
+  min-width: 320px;
   font-size: 16px;
+  font-family: 'PT Sans', sans-serif;
   h2 {
     font-size: 2rem;
+    color: #010101;
+    margin: 0;
   }
+  .under-title {
+    font-size: 1.25rem;
+    color: #313841;
+  }
+  .text {
+    color: #555555;
+    margin: 0;
+  }
+
 }
 header {
   position: absolute;
@@ -15,10 +23,12 @@ header {
   padding-top: 52px;
   display: flex;
   justify-content: center;
+  z-index: 10;
   .container {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    position: relative;
     .logo {
       display: flex;
       align-items: center;
@@ -35,11 +45,15 @@ header {
         list-style: none;
         padding: 0;
         &-item {
+          cursor: pointer;
           a {
             font-size: 1.5rem;
             text-decoration: none;
             color: black;
             font-weight: bold;
+            &:hover {
+              color: white;
+            }
           }
           &:not(:first-child){
             margin-left: 75px;
@@ -53,6 +67,7 @@ header {
 main {
   .hero {
     height: 100vh;
+    max-height: 1080px;
     display: flex;
     justify-content: center;
     background-color: #fcdb00;
@@ -62,28 +77,40 @@ main {
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      position: relative;
       .slider {
         width: 100%;
         display: flex;
-        align-items: center;
-        justify-content: space-between;
+        overflow: hidden;
         background-color: #fcdb00;
+        .slider-item{
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          min-width: 100%;
+        }
         .content {
-          p {
-            font-size: 1.25rem;
-          }
+          display: flex;
+          flex-direction: column;
+          max-width: 390px;
+          margin-left: 8px;
           .store-buttons {
-            padding-top: 45px;
+            margin-top: 24px;
             .btn-down {
+              font-size: 50px;
               padding: 0;
               border: 0;
               outline: 0;
+              cursor: pointer;
               background-color: transparent;
               &:not(:first-child) {
                 margin-left: 38px;
               }
             }
           }
+        }
+        .iPad-mini-white-facing {
+          margin-right: 42px;
         }
       }
       .slider-bullets {
@@ -103,20 +130,168 @@ main {
     display: flex;
     justify-content: center;
     height: 100vh;
+    max-height: 1080px;
     .container {
       width: 100%;
-      h2 {
-        text-align: center;
-      }
-      p {
-        text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .section-title {
+        margin-bottom: 87px;
+        h2 {
+          text-align: center;
+        }
+        p {
+          text-align: center;
+        }
       }
       .features-grid {
-        .row-1 {
+        .row {
           display: flex;
           flex-direction: row;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          &:not(:last-child) {
+            margin-bottom: 87px;
+          }
+          .featured {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: space-between;
+            i {
+              text-align: center;
+              font-size: 50px;
+              width: 50px;
+            }
+            .description {
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+              width: 210px;
+              margin-left: 20px;
+              h3 {
+                margin-top: 0;
+              }
+              p {
+                text-align: unset;
+                margin: 0;
+              }
+            }
+          }
         }
       }
     }
   }
 }
+footer {
+  height: 100vh;
+  max-height: 1080px;
+  background-color: #010101;
+  display: flex;
+  justify-content: center;
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .subcrible {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 70px;
+      .section-title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h2 {
+          text-align: center;
+          color: #fcdb00;
+        }
+        p {
+          max-width: 720px;
+          color: #898989;
+          text-align: center;
+        }
+      }
+      .email {
+        display: flex;
+        justify-content: center;
+        form {
+          width: 100%;
+          max-width: 780px;
+          display: flex;
+          justify-content: space-around;
+          flex-wrap: wrap;
+          input[type="text"] {
+            width: 100%;
+            max-width: 580px;
+            padding: 12px 20px;
+            margin: 8px 8px;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+          }
+          input[type="submit"] {
+            background-color: #fcdb00;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-transform: uppercase;
+            color: black;
+            font-weight: bolder;
+
+          }
+        }
+      }
+    }
+    .social-content {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 134px;
+      a:not(:first-child) {
+        margin-left: 32px;
+      }
+    }
+    .footer-widgets {
+      display: flex;
+      justify-content: space-between;
+      color: white;
+      padding: 0 80px 0 13px;
+      .address {
+        max-width: 185px;
+        p {
+          margin: 0;
+        }
+      }
+      .links-group {
+        width: 540px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .column {
+          display: flex;
+          flex-direction: column;
+          &:first-child {
+            margin-left: 15px;
+          }
+          a {
+            color: white;
+            text-decoration: none;
+            &:hover {
+              color: #fcdb00;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.container {
+  max-width: 960px;
+  margin: 0 10px;
+}
+@import "imports/media";

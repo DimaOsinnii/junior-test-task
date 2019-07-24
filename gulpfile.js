@@ -11,7 +11,7 @@ const pipeline = require('readable-stream').pipeline;
 
 function styles() {
     return pipeline(
-        gulp.src(['./app/styles/normalize.css', './app/styles/less/main.less']),
+        gulp.src(['./app/styles/normalize.css','./app/styles/dropdown.css','./app/styles/less/main.less']),
         sourcemaps.init(),
         less(),
         concat('main.css'),
