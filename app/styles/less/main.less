@@ -2,21 +2,25 @@ body {
   min-width: 320px;
   font-size: 16px;
   font-family: 'PT Sans', sans-serif;
+
   h2 {
     font-size: 2rem;
     color: #010101;
     margin: 0;
   }
+
   .under-title {
     font-size: 1.25rem;
     color: #313841;
   }
+
   .text {
     color: #555555;
     margin: 0;
   }
 
 }
+
 header {
   position: absolute;
   width: 100%;
@@ -24,38 +28,47 @@ header {
   display: flex;
   justify-content: center;
   z-index: 10;
+
   .container {
     width: 100%;
     display: flex;
     justify-content: space-between;
     position: relative;
+
     .logo {
       display: flex;
       align-items: center;
+
       img:not(:first-child) {
         margin-left: 10px;
       }
     }
+
     .dropdown {
       display: none;
     }
+
     .top-menu {
-        .nav {
+      .nav {
         display: flex;
         list-style: none;
         padding: 0;
+
         &-item {
           cursor: pointer;
+
           a {
             font-size: 1.5rem;
             text-decoration: none;
             color: black;
             font-weight: bold;
+
             &:hover {
               color: white;
             }
           }
-          &:not(:first-child){
+
+          &:not(:first-child) {
             margin-left: 75px;
 
           }
@@ -64,6 +77,7 @@ header {
     }
   }
 }
+
 main {
   .hero {
     height: 100vh;
@@ -71,6 +85,7 @@ main {
     display: flex;
     justify-content: center;
     background-color: #fcdb00;
+
     .container {
       width: 100%;
       display: flex;
@@ -78,26 +93,37 @@ main {
       justify-content: center;
       align-items: center;
       position: relative;
+
       .slider {
         width: 100%;
         display: flex;
-        overflow: hidden;
         background-color: #fcdb00;
-        .slider-item{
+        overflow: hidden;
+
+        &::-webkit-scrollbar {
+          width: 0 !important
+        }
+
+        .slider-item {
           display: flex;
           align-items: center;
           justify-content: space-between;
           width: 100%;
           min-width: 100%;
-
+          transition-property: all;
+          transition-duration: .5s;
+          transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
         }
+
         .content {
           display: flex;
           flex-direction: column;
           max-width: 390px;
           margin: 50px;
+
           .store-buttons {
             margin-top: 24px;
+
             .btn-down {
               font-size: 50px;
               padding: 0;
@@ -105,77 +131,103 @@ main {
               outline: 0;
               cursor: pointer;
               background-color: transparent;
+
               &:not(:first-child) {
                 margin-left: 38px;
               }
             }
           }
         }
+
         .iPad-mini-white-facing {
           margin: 50px;
         }
       }
+
       .slider-bullets {
         position: absolute;
         bottom: 50px;
+
         .dot {
           height: 14px;
           width: 14px;
           background-color: #bbb;
           border-radius: 50%;
           display: inline-block;
+          transition: .3s;
+
+          &:hover {
+            background-color: #010101;
+            transform: scale(1.1);
+            cursor: pointer;
+          }
+        }
+        .dot-active{
+          background-color: #000;
         }
       }
     }
   }
+
   .features {
     display: flex;
     justify-content: center;
     height: 100vh;
     max-height: 1080px;
+
     .container {
       width: 100%;
       display: flex;
       flex-direction: column;
       justify-content: center;
+
       .section-title {
         margin-bottom: 87px;
+
         h2 {
           text-align: center;
 
         }
+
         p {
           text-align: center;
         }
       }
+
       .features-grid {
         .row {
           display: flex;
           flex-direction: row;
           justify-content: space-between;
           flex-wrap: wrap;
+
           &:not(:last-child) {
             margin-bottom: 87px;
           }
+
           .featured {
             display: flex;
             flex-direction: row;
             align-items: flex-start;
             justify-content: space-between;
+
             i {
               text-align: center;
               font-size: 50px;
               width: 50px;
             }
+
             .description {
               display: flex;
               flex-direction: column;
               align-items: flex-start;
               width: 210px;
               margin-left: 20px;
+
               h3 {
                 margin-top: 0;
               }
+
               p {
                 text-align: unset;
                 margin: 0;
@@ -187,6 +239,7 @@ main {
     }
   }
 }
+
 footer {
   height: 100vh;
   max-height: 1080px;
@@ -194,38 +247,46 @@ footer {
   background-color: #010101;
   display: flex;
   justify-content: center;
+
   .container {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;;
+
     .subcrible {
       display: flex;
       flex-direction: column;
       margin: 100px;
+
       .section-title {
         display: flex;
         flex-direction: column;
         align-items: center;
+
         h2 {
           text-align: center;
           color: #fcdb00;
         }
+
         p {
           max-width: 720px;
           color: #898989;
           text-align: center;
         }
       }
+
       .email {
         display: flex;
         justify-content: center;
+
         form {
           width: 100%;
           max-width: 780px;
           display: flex;
           justify-content: space-around;
           flex-wrap: wrap;
+
           input[type="text"] {
             width: 100%;
             max-width: 580px;
@@ -236,6 +297,7 @@ footer {
             border-radius: 4px;
             box-sizing: border-box;
           }
+
           input[type="submit"] {
             background-color: #fcdb00;
             padding: 14px 20px;
@@ -251,38 +313,48 @@ footer {
         }
       }
     }
+
     .social-content {
       display: flex;
       justify-content: center;
+
       a:not(:first-child) {
         margin-left: 32px;
       }
     }
+
     .footer-widgets {
       display: flex;
       justify-content: space-between;
       color: white;
       padding: 0 80px 0 13px;
+
       .address {
         max-width: 185px;
+
         p {
           margin: 0;
         }
       }
+
       .links-group {
         width: 540px;
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+
         .column {
           display: flex;
           flex-direction: column;
+
           &:first-child {
             margin-left: 15px;
           }
+
           a {
             color: white;
             text-decoration: none;
+
             &:hover {
               color: #fcdb00;
               cursor: pointer;
@@ -293,8 +365,10 @@ footer {
     }
   }
 }
+
 .container {
   max-width: 960px;
   margin: 0 10px;
 }
+
 @import "imports/media";
