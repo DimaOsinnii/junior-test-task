@@ -162,7 +162,8 @@ main {
             cursor: pointer;
           }
         }
-        .dot-active{
+
+        .dot-active {
           background-color: #000;
         }
       }
@@ -253,11 +254,10 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: space-around;;
-
+    position: relative;
     .subcrible {
       display: flex;
       flex-direction: column;
-      margin: 100px;
 
       .section-title {
         display: flex;
@@ -287,7 +287,7 @@ footer {
           justify-content: space-around;
           flex-wrap: wrap;
 
-          input[type="text"] {
+          input[type="email"] {
             width: 100%;
             max-width: 580px;
             padding: 12px 20px;
@@ -308,7 +308,7 @@ footer {
             text-transform: uppercase;
             color: black;
             font-weight: bolder;
-
+            outline: none;
           }
         }
       }
@@ -338,7 +338,7 @@ footer {
       }
 
       .links-group {
-        width: 540px;
+        max-width: 540px;
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
@@ -362,6 +362,43 @@ footer {
           }
         }
       }
+    }
+    .email-message{
+      position: absolute;
+      background-color: #fcdb00;
+      width: 50%;
+      height: 20%;
+      border-radius: 10px;
+      margin: 0 auto;
+      left: 0;
+      font-size: 2rem;
+      right: 0;
+      -webkit-box-shadow: 0px 0px 24px 0px rgba(235,212,3,1);
+      -moz-box-shadow: 0px 0px 24px 0px rgba(235,212,3,1);
+      box-shadow: 0px 0px 24px 0px rgba(235,212,3,1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: .3s;
+
+
+      .checkmark{
+        display:inline-block;
+        &:after{
+          content: '';
+          display: block;
+          width: 50px;
+          height: 100px;
+          border: solid #000;
+          border-width: 0 2px 2px 0;
+          transform: rotate(45deg);
+        }
+
+      }
+    }
+    .email-active{
+      opacity: 1;
     }
   }
 }

@@ -25,7 +25,7 @@ function styles() {
 
 function scripts() {
     return pipeline(
-        gulp.src(['./app/scripts/modules/**/*.js', './app/scripts/main.js']),
+        gulp.src(['./app/scripts/email.js', './app/scripts/main.js']),
         uglify(),
         concat('main.js'),
         gulp.dest('./build/js'),

@@ -5,14 +5,14 @@ var slider = document.querySelector('.slider');
 var sliderItem = document.querySelectorAll('.slider-item');
 var position = 0;
 
-navDots.forEach(function (dot, dotIndex){
-    dot.addEventListener('click', function(e) {
-        slideItems(dot,dotIndex);
+navDots.forEach(function (dot, dotIndex) {
+    dot.addEventListener('click', function (e) {
+        slideItems(dot, dotIndex);
     })
 });
 
-function slideItems(dot,dotIndex) {
-    sliderItem.forEach( function (sliderItem){
+function slideItems(dot, dotIndex) {
+    sliderItem.forEach(function (sliderItem) {
         sliderItem.style.transform = "translate(" + (dotIndex * -sliderItem.clientWidth) + "px)";
         position = dotIndex;
     });
@@ -20,17 +20,17 @@ function slideItems(dot,dotIndex) {
 }
 
 function setActiveDot() {
-    navDots.forEach(function (dot, index){
-        if(index === position){
+    navDots.forEach(function (dot, index) {
+        if (index === position) {
             dot.classList.add('dot-active')
-        }else{
+        } else {
             dot.classList.remove('dot-active')
         }
     })
 }
 
 
-function swipedetect(el, callback){
+function swipedetect(el, callback) {
     var touchsurface = el,
         swipedir,
         startX,
@@ -42,9 +42,10 @@ function swipedetect(el, callback){
         allowedTime = 300,
         elapsedTime,
         startTime,
-        handleswipe = callback || function(swipedir){};
+        handleswipe = callback || function (swipedir) {
+        };
 
-    touchsurface.addEventListener('touchstart', function(e){
+    touchsurface.addEventListener('touchstart', function (e) {
         var touchobj = e.changedTouches[0];
         swipedir = 'none';
         dist = 0;
@@ -54,18 +55,18 @@ function swipedetect(el, callback){
         e.preventDefault()
     }, false);
 
-    touchsurface.addEventListener('touchmove', function(e){
+    touchsurface.addEventListener('touchmove', function (e) {
         e.preventDefault();
     }, false);
 
-    touchsurface.addEventListener('touchend', function(e){
+    touchsurface.addEventListener('touchend', function (e) {
         var touchobj = e.changedTouches[0];
         distX = touchobj.pageX - startX;
         distY = touchobj.pageY - startY;
         elapsedTime = new Date().getTime() - startTime;
-        if (elapsedTime <= allowedTime){
-            if (Math.abs(distX) >= threshold && Math.abs(distY) <= restraint){
-                swipedir = (distX < 0)? 'left' : 'right';
+        if (elapsedTime <= allowedTime) {
+            if (Math.abs(distX) >= threshold && Math.abs(distY) <= restraint) {
+                swipedir = (distX < 0) ? 'left' : 'right';
             }
         }
         handleswipe(swipedir);
@@ -73,21 +74,21 @@ function swipedetect(el, callback){
     }, false)
 }
 
-swipedetect(slider, function(swipedir){
-    if(swipedir === 'left' && position < slideItems.length){
+swipedetect(slider, function (swipedir) {
+    if (swipedir === 'left' && position < slideItems.length) {
         slideItems(navDots[position], ++position)
-    }else if(swipedir === 'right' && position > 0){
+    } else if (swipedir === 'right' && position > 0) {
         slideItems(navDots[position], --position)
     }
 });
 
+
 var toggle = false;
 function show(dropMenu) {
-    if(!toggle) {
+    if (!toggle) {
         dropMenu.style.top = "10vh";
         toggle = !toggle;
-    }
-    else {
+    } else {
         dropMenu.style.top = "-500px";
         toggle = !toggle;
     }
