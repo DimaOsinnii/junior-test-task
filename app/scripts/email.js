@@ -1,5 +1,5 @@
 /* SmtpJS.com - v3.0.0 */
-var Email = {
+const Email = {
     send: function (a) {
         return new Promise(function (n, e) {
             a.nocache = Math.floor(1e6 * Math.random() + 1), a.Action = "Send";
@@ -25,16 +25,14 @@ var Email = {
         return "withCredentials" in t ? t.open(e, n, !0) : "undefined" != typeof XDomainRequest ? (t = new XDomainRequest).open(e, n) : t = null, t
     }
 };
-var email = document.getElementById('mail');
-var buttonSubmit = document.getElementById("submit");
-var messageResult = document.querySelector('.email-message');
-var sendResult = '';
-
-var yourToken = '840b2860-a6e0-4d8d-9608-a5c76a140b9b'; // enter token to br able to send emails
-var emailToSendFrom = 'd.osinnii@gmail.com';
-var emailSubject = "Test site";
-var emailContent = "Привіт, це перевірка тестового завдання, яке зробив Osinnii Dmytro";
-
+const email = document.getElementById('mail');
+const buttonSubmit = document.getElementById("submit");
+const messageResult = document.querySelector('.email-message');
+let sendResult = '';
+const yourToken = '840b2860-a6e0-4d8d-9608-a5c76a140b9b'; // enter token to br able to send emails
+const emailToSendFrom = 'd.osinnii@gmail.com';
+const emailSubject = "Test site";
+const emailContent = "Привіт, це перевірка тестового завдання, яке зробив Osinnii Dmytro";
 
 buttonSubmit.addEventListener('click', function (e) {
     if (email.checkValidity()) {
@@ -43,7 +41,9 @@ buttonSubmit.addEventListener('click', function (e) {
     }
 });
 
-function sendEmail() {
+//function which send message on current email(Use your 'SecureToken')
+// and shows a success message;
+sendEmail = () => {
     Email.send({
         SecureToken: yourToken,
         To: email.value,
@@ -51,16 +51,16 @@ function sendEmail() {
         Subject: emailSubject,
         Body: emailContent
     })
-        .then(function (message) {
-                sendResult = 'Email successfully sent';
-                messageResult.innerHTML = ('<p>' + sendResult + '</p>');
-                messageResult.classList.add('email-active');
-                setTimeout(function () {
-                    messageResult.classList.remove('email-active');
-                }, 2000);
-                email.value = '';
+        .then(function () {
+            sendResult = 'Email successfully sent';
+            messageResult.innerHTML = ('<p>' + sendResult + '</p>');
+            messageResult.classList.add('email-active');
+            setTimeout(function () {
+                messageResult.classList.remove('email-active');
+            }, 2000);
+            email.value = '';
         })
         .catch(function (e) {
             console.log(e);
         })
-}
+};

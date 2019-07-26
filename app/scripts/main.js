@@ -1,10 +1,11 @@
-var hamburger = document.querySelector(".hamburger");
-var dropdownMenu = document.getElementById("myDropdown");
-var navDots = document.querySelectorAll('.dot');
-var slider = document.querySelector('.slider');
-var sliderItem = document.querySelectorAll('.slider-item');
-var position = 0;
+const hamburger = document.querySelector(".hamburger");
+const dropdownMenu = document.getElementById("myDropdown");
+const navDots = document.querySelectorAll('.dot');
+const slider = document.querySelector('.slider');
+const sliderItem = document.querySelectorAll('.slider-item');
+let position = 0;
 
+//functional for slider implementation
 navDots.forEach(function (dot, dotIndex) {
     dot.addEventListener('click', function (e) {
         slideItems(dot, dotIndex);
@@ -28,7 +29,6 @@ function setActiveDot() {
         }
     })
 }
-
 
 function swipedetect(el, callback) {
     var touchsurface = el,
@@ -62,10 +62,9 @@ function swipedetect(el, callback) {
     touchsurface.addEventListener('touchend', function (e) {
         var touchobj = e.changedTouches[0];
         distX = touchobj.pageX - startX;
-        distY = touchobj.pageY - startY;
         elapsedTime = new Date().getTime() - startTime;
         if (elapsedTime <= allowedTime) {
-            if (Math.abs(distX) >= threshold && Math.abs(distY) <= restraint) {
+            if (Math.abs(distX) >= threshold) {
                 swipedir = (distX < 0) ? 'left' : 'right';
             }
         }
@@ -83,7 +82,9 @@ swipedetect(slider, function (swipedir) {
 });
 
 
-var toggle = false;
+// functional for implementing burger menu
+let toggle = false;
+
 function show(dropMenu) {
     if (!toggle) {
         dropMenu.style.top = "10vh";
@@ -93,6 +94,7 @@ function show(dropMenu) {
         toggle = !toggle;
     }
 }
+
 hamburger.addEventListener("click", function () {
     this.classList.toggle("is-active");
     show(dropdownMenu);

@@ -139,12 +139,24 @@
   footer {
     .container {
       .social-content {
-        margin-bottom: 50px;
+        z-index: 1;
+      }
+      .footer-widgets {
+        flex-direction: column;
+        .address {
+          margin-bottom: 50px
+        }
+        .links-group {
+          .column {
+            margin-right: 20px;
+            margin-bottom: 20px;
+            &:first-child {
+              margin-left: 0;
+            }
+          }
+        }
       }
 
-      .address {
-        margin-bottom: 50px
-      }
 
       .email {
         flex-direction: column;

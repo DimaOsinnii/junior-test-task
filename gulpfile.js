@@ -8,6 +8,7 @@ const less = require('gulp-less');
 const del = require('del');
 const concat = require('gulp-concat');
 const pipeline = require('readable-stream').pipeline;
+const babel = require('gulp-babel');
 
 function styles() {
     return pipeline(
@@ -25,9 +26,17 @@ function styles() {
 
 function scripts() {
     return pipeline(
-        gulp.src(['./app/scripts/email.js', './app/scripts/main.js']),
-        uglify(),
+        gulp.src(['./app/scripts/*.js']),
+        sourcemaps.init(),
+        babel({
+            presets: [
+                ['@babel/env', {
+                modules: false
+            }]
+            ]
+        }),
         concat('main.js'),
+        sourcemaps.write("./"),
         gulp.dest('./build/js'),
         browserSync.stream()
     )

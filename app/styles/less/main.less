@@ -1,3 +1,4 @@
+@import "imports/variables";
 body {
   min-width: 320px;
   font-size: 16px;
@@ -28,6 +29,8 @@ header {
   display: flex;
   justify-content: center;
   z-index: 10;
+  background-color: rgba(252,219,0);
+  opacity: .7;
 
   .container {
     width: 100%;
@@ -84,7 +87,7 @@ main {
     max-height: 1080px;
     display: flex;
     justify-content: center;
-    background-color: #fcdb00;
+    background-color: @yellow;
 
     .container {
       width: 100%;
@@ -97,7 +100,7 @@ main {
       .slider {
         width: 100%;
         display: flex;
-        background-color: #fcdb00;
+        background-color: @yellow;
         overflow: hidden;
 
         &::-webkit-scrollbar {
@@ -266,7 +269,7 @@ footer {
 
         h2 {
           text-align: center;
-          color: #fcdb00;
+          color: @yellow;
         }
 
         p {
@@ -299,7 +302,7 @@ footer {
           }
 
           input[type="submit"] {
-            background-color: #fcdb00;
+            background-color: @yellow;
             padding: 14px 20px;
             margin: 8px 0;
             border: none;
@@ -309,6 +312,9 @@ footer {
             color: black;
             font-weight: bolder;
             outline: none;
+            &:hover {
+              color: white;
+            }
           }
         }
       }
@@ -317,6 +323,7 @@ footer {
     .social-content {
       display: flex;
       justify-content: center;
+      z-index: 1;
 
       a:not(:first-child) {
         margin-left: 32px;
@@ -325,12 +332,12 @@ footer {
 
     .footer-widgets {
       display: flex;
-      justify-content: space-between;
       color: white;
       padding: 0 80px 0 13px;
 
       .address {
         max-width: 185px;
+        margin-right: 123px;
 
         p {
           margin: 0;
@@ -338,7 +345,7 @@ footer {
       }
 
       .links-group {
-        max-width: 540px;
+        width: 100%;
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
@@ -348,7 +355,7 @@ footer {
           flex-direction: column;
 
           &:first-child {
-            margin-left: 15px;
+            margin-left: 30px;
           }
 
           a {
@@ -356,7 +363,7 @@ footer {
             text-decoration: none;
 
             &:hover {
-              color: #fcdb00;
+              color: @yellow;
               cursor: pointer;
             }
           }
@@ -365,13 +372,13 @@ footer {
     }
     .email-message{
       position: absolute;
-      background-color: #fcdb00;
+      background-color: @yellow;
       width: 50%;
       height: 20%;
       border-radius: 10px;
       margin: 0 auto;
       left: 0;
-      font-size: 2rem;
+      font-size: 1rem;
       right: 0;
       -webkit-box-shadow: 0px 0px 24px 0px rgba(235,212,3,1);
       -moz-box-shadow: 0px 0px 24px 0px rgba(235,212,3,1);
@@ -407,5 +414,4 @@ footer {
   max-width: 960px;
   margin: 0 10px;
 }
-
 @import "imports/media";
