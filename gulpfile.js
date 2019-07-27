@@ -35,6 +35,7 @@ function scripts() {
             }]
             ]
         }),
+        uglify(),
         concat('main.js'),
         sourcemaps.write("./"),
         gulp.dest('./build/js'),
