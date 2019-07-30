@@ -1,5 +1,5 @@
 
 # Installation:
--nmp install
+-npm install
 # Run
 -npm run dev
